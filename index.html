@@ -8,22 +8,27 @@
     <link rel="stylesheet" href="css/styles.css">
     <script src="js/uikit.js"></script>
     <script src="js/uikit-icons.js"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+    <link rel="manifest" href="assets/site.webmanifest">
 
-    <title>Portfolio</title>
+    <title>Winterlead | Lubomir Bures</title>
+
 </head>
 <body>
 <!-- Navigation Bar -->
     <nav class="uk-navbar-container uk-margin-small-left uk-margin-small-right uk-visible@m uk-margin-xlarge-left uk-margin-xlarge-right" uk-navbar uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
     
     <div class="uk-navbar-left">
-        <a href="" class="uk-navbar-item uk-logo uk-light">JohnDoe.</a>
+        <a href="" class="uk-navbar-item uk-logo uk-light">Winterlead | Lubomir Bures</a>
     </div>
     <div class="uk-navbar-right">
 
         <ul class="uk-navbar-nav uk-light">
-            <li><a class="uk-button-text uk-text-capitalize" href="#about" uk-scroll>About</a></li>
-            <li><a class="uk-button-text uk-text-capitalize" href="#projects" uk-scroll>Projects</a></li>
-            <li><a class="uk-button-text uk-text-capitalize" href="mailto:" uk-scroll>Contact</a></li>
+            <li><a class="uk-button-text uk-text-capitalize" href="#aboutbefore" uk-scroll>About</a></li>
+            <li><a class="uk-button-text uk-text-capitalize" href="#projectsbefore" uk-scroll>Projects</a></li>
+            <li><a class="uk-button-text uk-text-capitalize" href="#contactsbefore" uk-scroll>Contact</a></li>
 
         </ul>
 
@@ -35,7 +40,7 @@
 <nav class="uk-navbar-container uk-margin-small-left uk-margin-small-right uk-hidden@m uk-margin-xlarge-left uk-margin-xlarge-right" uk-navbar uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
     
     <div class="uk-navbar-left">
-        <a href="" class="uk-navbar-item uk-logo uk-light">JohnDoe.</a>
+        <a href="" class="uk-navbar-item uk-logo uk-light">Winterlead | Lubomir Bures</a>
     </div>
     <div class="uk-navbar-right">
 
@@ -52,9 +57,9 @@
 
         <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
             <li class="uk-active"><a href="#" uk-scroll>Home</a></li>
-            <li class="uk-active"><a href="#about" uk-scroll>About</a></li>
-            <li class="uk-active"><a href="#projects" uk-scroll>Projects</a></li>
-            <li class="uk-active"><a href="mailto:">Contact</a></li> <!--- change to ur email-->
+            <li class="uk-active"><a href="#aboutbefore" uk-scroll>About</a></li>
+            <li class="uk-active"><a href="#projectsbefore" uk-scroll>Projects</a></li>
+            <li class="uk-active"><a href="mailto:hello@winterlead.com">Contact</a></li> <!--- change to ur email-->
 
         </ul>
 
@@ -67,8 +72,8 @@
 <!-- Navigation Bar Mobile Ends -->
 <!-- Home -->
 <section class="uk-margin-small-left uk-margin-small-right uk-margin-xlarge-top uk-margin-xlarge-bottom">
-    <h1 class="uk-margin-xlarge-left uk-light uk-text-left uk-margin-xlarge-right">I'm John Doe, a front-end web developer, <br>graphic designer, and an UI/UX designer.</h1>
-    <a href="#about" class="uk-margin-xlarge-left uk-text-capitalize uk-button uk-button-secondary" uk-scroll>About Me</a>
+    <h1 class="uk-margin-xlarge-left uk-light uk-text-left uk-margin-xlarge-right">I'm Lubomir Bures, a computational physicist, <br>nuclear engineer, and a software developer.</h1>
+    <a href="#aboutbefore" class="uk-margin-xlarge-left uk-text-capitalize uk-button uk-button-secondary" uk-scroll>About Me</a>
 
 
 </section>
@@ -80,11 +85,18 @@
 <hr class="uk-margin-xlarge-top uk-margin-xlarge-left uk-margin-xlarge-right">
 
 <!-- About Me -->
+<!-- This div is to fix the issue with scrolling -->
+<div id="aboutbefore"></div>
 <section id="about" class="uk-margin-small-left uk-margin-small-right uk-margin-xlarge-top uk-margin-xlarge-bottom">
 <h3 class="uk-margin-xlarge-left uk-light">About Me</h3>
 <!-- Change here to ur paragraph -->
-<p class="uk-margin-xlarge-left uk-margin-xlarge-right">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eleifend posuere tortor vel lobortis. Morbi pretium in sapien non suscipit. Nam ac efficitur enim. Vestibulum accumsan erat sit amet nulla commodo, nec varius felis aliquam. Aliquam suscipit mauris lacus, at euismod purus tempor aliquam. Donec varius sem nisl. Fusce augue tortor, hendrerit at elit quis, aliquet blandit eros. Nam gravida sem velit, eu placerat nunc commodo ut. <br><br>Maecenas ultricies magna nec nisi egestas, in posuere velit tincidunt. Nam quis turpis non ligula dapibus bibendum sit amet at felis. Vestibulum ornare tempor nulla, quis sodales ex consequat vel. Morbi sollicitudin ligula eget mattis euismod. Nulla scelerisque malesuada arcu a vulputate. Phasellus ac lectus consequat, eleifend libero id, tincidunt lectus. Sed tempus gravida odio, sed semper neque aliquet imperdiet.</p>
-<a href="" class="uk-margin-xlarge-left uk-light uk-button-text" uk-icon="instagram"></a> &nbsp;<a href="" class="uk-light uk-button-text" uk-icon="dribbble"></a> &nbsp;<a href="" class="uk-button-text uk-light" uk-icon="github"></a> &nbsp;<a href="" class=" uk-light uk-button-text" uk-icon="linkedin"></a>
+<p class="uk-margin-xlarge-left uk-margin-xlarge-right">
+    With a strong foundation in computational physics and engineering, I bring a wealth of expertise in developing, validating, and applying mathematical models to complex technical challenges. My experience spans across various programming languages and software tools, including Python and C++, making me well-equipped to tackle diverse software development projects. In my career, I have created both computational physics models and data processing pipelines, and I have also executed several data analysis and machine learning projects. 
+    <br><br>
+    Additionally, I have served as a project manager and in this capacity, I have planned, delegated, and overseen the implementation of several computational models and software tools. This blend of technical proficiency and project management experience positions me well for the challenges and responsibilities of freelance expert technical work.
+    <br><br>
+    My academic credentials include a PhD from the Institute of Physics of the Swiss Federal Institute of Technology in Lausanne and a Joint Master in Nuclear Engineering from Swiss Federal Institutes of Technology in Zurich and Lausanne. These experiences have honed my analytical skills and my ability to translate complex data into actionable insights.</p>
+<!--<a href="" class="uk-margin-xlarge-left uk-light uk-button-text" uk-icon="instagram"></a>  &nbsp;--><a href="https://winterlead.com" class="uk-margin-xlarge-left uk-light uk-button-text" uk-icon="dribbble"></a> &nbsp;<a href="mailto:hello@winterlead.com" class="uk-light uk-button-text" uk-icon="mail"></a> &nbsp;<a href="https://github.com/tannhorn" class="uk-button-text uk-light" uk-icon="github"></a> &nbsp;<a href="https://www.linkedin.com/in/lubomir-bures/" class=" uk-light uk-button-text" uk-icon="linkedin"></a>  &nbsp;<a href="https://scholar.google.com/citations?user=rQRIrc4AAAAJ" class=" uk-light uk-button-text" uk-icon="scholar"></a>
 
 <!-- About Me Ends -->
 
@@ -95,12 +107,14 @@
 
 <!-- Projects Section -->
 <hr class="uk-margin-xlarge-left uk-margin-xlarge-right">
+<!-- This div is to fix the issue with scrolling -->
+<div id="projectsbefore"></div>
 <section id="projects" class="uk-margin-small-left uk-margin-small-right uk-margin-xlarge-top uk-margin-xlarge-bottom">
-<h3 class="uk-margin-xlarge-left uk-light">Projects</h3>
-<p class="uk-margin-xlarge-left">Projects that i've been working on</p>
+<h3 class="uk-margin-xlarge-left uk-light">Freelance Projects</h3>
+<p class="uk-margin-xlarge-left">As a freelance consultant, I have worked on the following projects. Under construction</p>
 
 <div class="uk-margin-xlarge-left uk-margin-xlarge-right">
-    <!-- Change all of this to ur projects -->
+    <!-- Change all of this to ur projects 
     <div class="uk-margin uk-card uk-card-secondary uk-card-body ">
         <h4>Project Name</h4>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -108,23 +122,24 @@
             <span uk-icon="icon: link">
             </span> Website Link </a>
         </div>
-        <div class="uk-margin uk-card uk-card-secondary uk-card-body ">
-            <h4>Project Name</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            <a class="uk-button-text uk-text-decoration-none" href="">
-                <span uk-icon="icon: link">
-                </span> Website Link </a>
-            </div></div>
-
-
-
     <br>
+    -->
 
 
 </section>
-<hr class="uk-margin-xlarge-left uk-margin-xlarge-right">
 </div>
 <!-- Projects Section Ends -->
+
+<!-- Contacts Section -->
+<hr class="uk-margin-xlarge-left uk-margin-xlarge-right">
+<!-- This div is to fix the issue with scrolling -->
+<div id="contactsbefore"></div>
+<section id="contactsbefore" class="uk-margin-small-left uk-margin-small-right uk-margin-xlarge-top uk-margin-xlarge-bottom">
+<h3 class="uk-margin-xlarge-left uk-light">Contact</h3>
+<p class="uk-margin-xlarge-left">Get in touch at <a href="mailto:hello@winterlead.com" class="uk-light" uk-icon="mail">hello@winterlead.com </a> or find me on <a href="https://www.linkedin.com/in/lubomir-bures/" uk-icon="linkedinup">LinkedIn </a>!</p>
+<hr class="uk-margin-xlarge-left uk-margin-xlarge-right">
+
+<!-- Contacts Section Ends -->
     
 </body>
 </html>
