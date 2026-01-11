@@ -5214,9 +5214,10 @@ ul.uk-nav-sub {
  */
 .uk-navbar-nav > li > a {
   color: var(--eighth-color);
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   transition: 0.1s ease-in-out;
   transition-property: color, background-color;
+  font-size: 1.0rem;
 }
 /*
  * Hover
