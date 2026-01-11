@@ -85,3 +85,23 @@ button:focus-visible{
 .uk-navbar-container.uk-hidden\@m .uk-logo:hover{
   color: var(--bkg-color2);
 }
+
+/* Add responsive margin utilities (UIkit build doesn't include these) */
+/* @s = 640px */
+@media (min-width: 640px) {
+  .uk-margin-large-left\@s { margin-left: 40px !important; }
+  .uk-margin-large-right\@s { margin-right: 40px !important; }
+}
+
+/* @m = 960px */
+@media (min-width: 960px) {
+  .uk-margin-xlarge-left\@m { margin-left: 70px !important; }
+  .uk-margin-xlarge-right\@m { margin-right: 70px !important; }
+}
+
+
+/* @l = 1200px */
+@media (min-width: 1200px) {
+  .uk-margin-xlarge-left\@l { margin-left: 140px !important; }
+  .uk-margin-xlarge-right\@l { margin-right: 140px !important; }
+}
