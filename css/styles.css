@@ -65,10 +65,23 @@ button:focus-visible{
   transform: translateY(0);
 }
 
-/* Burger */
-.burger-btn{
-  background: transparent;
-  border: 0;
-  color: #000; /* makes the icon black in UIkit */
-  cursor: pointer;
+/* Mobile navbar: force burger to be black, with cyan highlight */
+.uk-navbar-container.uk-hidden\@m .uk-navbar-toggle{
+  color: #000 !important;     /* override UIkit's gray */
+  opacity: 1;                /* in case UIkit uses reduced opacity */
+  transition: color 0.15s ease;
+}
+
+.uk-navbar-container.uk-hidden\@m .uk-navbar-toggle:hover,
+.uk-navbar-container.uk-hidden\@m .uk-navbar-toggle:focus-visible,
+.uk-navbar-container.uk-hidden\@m .uk-navbar-toggle[aria-expanded="true"]{
+  color: var(--bkg-color2) !important;  /* your cyan */
+}
+
+/* Also for logo text to be sure */
+.uk-navbar-container.uk-hidden\@m .uk-logo{
+  color: #000;
+}
+.uk-navbar-container.uk-hidden\@m .uk-logo:hover{
+  color: var(--bkg-color2);
 }
