@@ -16,10 +16,11 @@ html{
 }
 
 /* Social row spacing (keeps same visual intent as &nbsp; but more robust) */
-.social-links{
+.social-links ul{
   display: flex;
   gap: 12px;
   align-items: center;
+  list-style: none;
 }
 
 .social-links a{
@@ -60,6 +61,8 @@ button:focus-visible{
   transform: translateY(-200%);
   transition: transform 0.2s ease;
   z-index: 10000;
+  background: rgba(0,0,0,0.92);
+  color: #fff;
 }
 .skip-link:focus{
   transform: translateY(0);
@@ -104,4 +107,10 @@ button:focus-visible{
 @media (min-width: 1200px) {
   .uk-margin-xlarge-left\@l { margin-left: 140px !important; }
   .uk-margin-xlarge-right\@l { margin-right: 140px !important; }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce){
+  html { scroll-behavior: auto; }
+  .skip-link { transition: none; }
 }

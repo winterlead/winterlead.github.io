@@ -5,6 +5,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&display=swap">
+
   <!-- Note the versioning of css and JS -->
   <link rel="stylesheet" href="css/uikit.css?v=3.14.0">
   <link rel="stylesheet" href="css/styles.css?v=20260111">
@@ -153,26 +158,56 @@
       </p>
 
       <!-- Social icons row -->
-    <div
-    class="social-links
-            uk-margin-small-left uk-margin-small-right
-            uk-margin-large-left@s uk-margin-large-right@s
-            uk-margin-xlarge-left@m uk-margin-xlarge-right@m
-            uk-margin-xlarge-left@l uk-margin-xlarge-right@l"
-    aria-label="Social links"
-    >
-    <a href="https://winterlead.com" class="uk-light uk-button-text" uk-icon="world" aria-label="Website"></a>
-    <a href="mailto:hello@winterlead.com" class="uk-light uk-button-text" uk-icon="mail" aria-label="Email"></a>
-    <a href="https://github.com/tannhorn" class="uk-light uk-button-text" uk-icon="github" aria-label="GitHub"></a>
-    <a href="https://www.linkedin.com/in/lubomir-bures/" class="uk-light uk-button-text" uk-icon="linkedin" aria-label="LinkedIn"></a>
-    <a href="https://scholar.google.com/citations?user=rQRIrc4AAAAJ" class="uk-light uk-button-text scholar-link" aria-label="Google Scholar">
-        <span class="scholar-icon" aria-hidden="true">
-        <svg viewBox="0 0 24 24" role="img" focusable="false" aria-hidden="true">
-            <path d="M12 3 1 8.2 12 13.4 20 9.7V16h2V8.2L12 3Zm-6.8 8.1V14c0 2.8 3.1 5 6.8 5s6.8-2.2 6.8-5v-2.9L12 14.8 5.2 11.1Z"/>
-        </svg>
-        </span>
-    </a>
-    </div>
+      <nav
+        class="social-links
+              uk-margin-small-left uk-margin-small-right
+              uk-margin-large-left@s uk-margin-large-right@s
+              uk-margin-xlarge-left@m uk-margin-xlarge-right@m
+              uk-margin-xlarge-left@l uk-margin-xlarge-right@l"
+        aria-label="Social links"
+      >
+        <ul class="uk-flex uk-flex-middle uk-flex-left uk-padding-remove uk-margin-remove">
+          <li>
+            <a href="https://winterlead.com"
+              target="_blank" rel="noopener noreferrer"
+              class="uk-light uk-button-text"
+              uk-icon="world"
+              aria-label="Website"></a>
+          </li>
+          <li>
+            <a href="mailto:hello@winterlead.com"
+              class="uk-light uk-button-text"
+              uk-icon="mail"
+              aria-label="Email"></a>
+          </li>
+          <li>
+            <a href="https://github.com/tannhorn"
+              target="_blank" rel="noopener noreferrer"
+              class="uk-light uk-button-text"
+              uk-icon="github"
+              aria-label="GitHub"></a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/lubomir-bures/"
+              target="_blank" rel="noopener noreferrer"
+              class="uk-light uk-button-text"
+              uk-icon="linkedin"
+              aria-label="LinkedIn"></a>
+          </li>
+          <li>
+            <a href="https://scholar.google.com/citations?user=rQRIrc4AAAAJ"
+              target="_blank" rel="noopener noreferrer"
+              class="uk-light uk-button-text scholar-link"
+              aria-label="Google Scholar">
+              <span class="scholar-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+                  <path d="M12 3 1 8.2 12 13.4 20 9.7V16h2V8.2L12 3Zm-6.8 8.1V14c0 2.8 3.1 5 6.8 5s6.8-2.2 6.8-5v-2.9L12 14.8 5.2 11.1Z"/>
+                </svg>
+              </span>
+            </a>
+          </li>
+        </ul>
+      </nav>
 
 
     <hr class="uk-margin-small-left uk-margin-small-right
@@ -192,7 +227,7 @@
         <div class="uk-margin uk-card uk-card-secondary uk-card-body">
           <p>
             I currently work as a <strong>Senior Multiphysics Specialist</strong> at
-            <a href="https://saltfoss.com" class="uk-link-reset">
+            <a href="https://saltfoss.com" class="uk-link-reset" target="_blank" rel="noopener noreferrer">
               <strong>Saltfoss Energy ApS</strong></a>, a Danish developer of barge-deployed molten-salt nuclear reactors.
           </p>
         </div>
@@ -220,7 +255,7 @@
         <div class="uk-margin uk-card uk-card-secondary uk-card-body">
           <h3>Quantified Carbon</h3>
           <p>Developed software for Quantified Carbon Limited. <i>April 2024 - June 2025.</i></p>
-          <a class="uk-button-text uk-text-decoration-none" href="https://www.quantifiedcarbon.com/">
+          <a class="uk-button-text uk-text-decoration-none" href="https://www.quantifiedcarbon.com/" target="_blank" rel="noopener noreferrer">
             <span uk-icon="icon: link"></span> Website Link
           </a>
         </div>
@@ -234,7 +269,7 @@
         <div class="uk-margin uk-card uk-card-secondary uk-card-body">
           <h3>Repower Initiative</h3>
           <p>Volunteered technical expertise to the non-profit Repower Initiative. <i>August 2024 - October 2024.</i></p>
-          <a class="uk-button-text uk-text-decoration-none" href="https://www.repower.world/">
+          <a class="uk-button-text uk-text-decoration-none" href="https://www.repower.world/" target="_blank" rel="noopener noreferrer">
             <span uk-icon="icon: link"></span> Website Link
           </a>
         </div>
@@ -270,7 +305,7 @@
           <span uk-icon="mail"></span> hello@winterlead.com
         </a>
         or find me on
-        <a href="https://www.linkedin.com/in/lubomir-bures/" class="uk-light uk-link-reset">
+        <a href="https://www.linkedin.com/in/lubomir-bures/" class="uk-light uk-link-reset" target="_blank" rel="noopener noreferrer">
           <span uk-icon="linkedin"></span> LinkedIn
         </a>!
       </p>
