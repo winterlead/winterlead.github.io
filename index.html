@@ -1,176 +1,201 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="top">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/uikit.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <script src="js/uikit.js"></script>
-    <script src="js/uikit-icons.js"></script>
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
-    <link rel="manifest" href="assets/site.webmanifest">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Winterlead | Lubomír Bureš</title>
+  <link rel="stylesheet" href="css/uikit.css">
+  <link rel="stylesheet" href="css/styles.css">
 
+  <!-- Defer JS so it doesn't block rendering -->
+  <script src="js/uikit.js" defer></script>
+  <script src="js/uikit-icons.js" defer></script>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+  <link rel="manifest" href="assets/site.webmanifest">
+
+  <title>Winterlead | Lubomír Bureš</title>
 </head>
+
 <body>
-<!-- Navigation Bar -->
-    <nav class="uk-navbar-container uk-margin-small-left uk-margin-small-right uk-visible@m uk-margin-xlarge-left uk-margin-xlarge-right" uk-navbar uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
-    
+  <!-- Optional: keyboard accessibility -->
+  <a class="skip-link" href="#content">Skip to content</a>
+
+  <!-- Navigation Bar (Desktop) -->
+  <nav
+    class="uk-navbar-container uk-margin-small-left uk-margin-small-right uk-visible@m uk-margin-xlarge-left uk-margin-xlarge-right"
+    uk-navbar
+    uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky"
+    aria-label="Primary navigation"
+  >
     <div class="uk-navbar-left">
-        <a href="" class="uk-navbar-item uk-logo uk-light">Winterlead | Lubomír Bureš</a>
+      <a href="#top" class="uk-navbar-item uk-logo uk-light">Winterlead | Lubomír Bureš</a>
     </div>
+
     <div class="uk-navbar-right">
-
-        <ul class="uk-navbar-nav uk-light">
-            <li><a class="uk-button-text uk-text-capitalize" href="#aboutbefore" uk-scroll>About</a></li>
-            <li><a class="uk-button-text uk-text-capitalize" href="#projectsbefore" uk-scroll>Projects</a></li>
-            <li><a class="uk-button-text uk-text-capitalize" href="#contactsbefore" uk-scroll>Contact</a></li>
-
-        </ul>
-
+      <ul class="uk-navbar-nav uk-light">
+        <li><a class="uk-button-text uk-text-capitalize" href="#about" uk-scroll>About</a></li>
+        <li><a class="uk-button-text uk-text-capitalize" href="#projects" uk-scroll>Projects</a></li>
+        <li><a class="uk-button-text uk-text-capitalize" href="#contact" uk-scroll>Contact</a></li>
+      </ul>
     </div>
-</nav>
-<!-- Navigation Bar Ends  -->
+  </nav>
 
-<!-- Navigation Bar Mobile -->
-<nav class="uk-navbar-container uk-margin-small-left uk-margin-small-right uk-hidden@m uk-margin-xlarge-left uk-margin-xlarge-right" uk-navbar uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
-    
+  <!-- Navigation Bar (Mobile) -->
+  <nav
+    class="uk-navbar-container uk-margin-small-left uk-margin-small-right uk-hidden@m uk-margin-xlarge-left uk-margin-xlarge-right"
+    uk-navbar
+    uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky"
+    aria-label="Primary navigation (mobile)"
+  >
     <div class="uk-navbar-left">
-        <a href="" class="uk-navbar-item uk-logo uk-light">Winterlead | Lubomír Bureš</a>
+      <a href="#top" class="uk-navbar-item uk-logo uk-light">Winterlead | Lubomír Bureš</a>
     </div>
+
     <div class="uk-navbar-right">
-
-        <ul class="uk-navbar-nav uk-light">
-            <li><button uk-toggle="target: #offcanvas-nav" type="button" uk-navbar-toggle-icon></button></li>
-
-        </ul>
-
+      <ul class="uk-navbar-nav uk-light">
+        <li>
+        <button class="burger-btn" type="button" uk-toggle="target: #offcanvas-nav" aria-label="Open menu">
+            <span uk-navbar-toggle-icon></span>
+        </button>
+        </li>
+      </ul>
     </div>
-</nav>
-<!-- Change This -->
-<div id="offcanvas-nav" uk-offcanvas="overlay: true">
+  </nav>
+
+  <div id="offcanvas-nav" uk-offcanvas="overlay: true">
     <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+      <button class="uk-offcanvas-close" type="button" uk-close aria-label="Close menu"></button>
 
         <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
-            <li class="uk-active"><a href="#" uk-scroll>Home</a></li>
-            <li class="uk-active"><a href="#aboutbefore" uk-scroll>About</a></li>
-            <li class="uk-active"><a href="#projectsbefore" uk-scroll>Projects</a></li>
-            <li class="uk-active"><a href="mailto:hello@winterlead.com">Contact</a></li> <!--- change to ur email-->
-
+            <li class="uk-active"><a href="#top" uk-scroll uk-toggle="target: #offcanvas-nav">Home</a></li>
+            <li class="uk-active"><a href="#about" uk-scroll uk-toggle="target: #offcanvas-nav">About</a></li>
+            <li class="uk-active"><a href="#projects" uk-scroll uk-toggle="target: #offcanvas-nav">Projects</a></li>
+            <li class="uk-active"><a href="#contact" uk-scroll uk-toggle="target: #offcanvas-nav">Contact</a></li>
         </ul>
-
-
-
-
-    </div>
-</div>
-
-<!-- Navigation Bar Mobile Ends -->
-<!-- Home -->
-<section class="uk-margin-small-left uk-margin-small-right uk-margin-xlarge-top uk-margin-xlarge-bottom">
-    <h1 class="uk-margin-xlarge-left uk-light uk-text-left uk-margin-xlarge-right">I'm Lubomír Bureš, a nuclear engineer with deep experience in computational modelling and technical problem solving.</h1>
-    <a href="#aboutbefore" class="uk-margin-xlarge-left uk-text-capitalize uk-button uk-button-secondary" uk-scroll>About Me</a>
-
-
-</section>
-
-<!-- Home Ends -->
-<br>
-
-
-<hr class="uk-margin-xlarge-top uk-margin-xlarge-left uk-margin-xlarge-right">
-
-<!-- About Me -->
-<!-- This div is to fix the issue with scrolling -->
-<div id="aboutbefore"></div>
-<section id="about" class="uk-margin-small-left uk-margin-small-right uk-margin-xlarge-top uk-margin-xlarge-bottom">
-<h3 class="uk-margin-xlarge-left uk-light">About Me</h3>
-<!-- Body of 'about me' -->
-<p class="uk-margin-xlarge-left uk-margin-xlarge-right">
-  I build and validate computational models that help teams make confident engineering decisions. My background is in computational physics and engineering, and I've worked on problems ranging from microscopic physics phenomena to system-level analyses.
-</p>
-
-<p class="uk-margin-xlarge-left uk-margin-xlarge-right">
-  In deep-tech R&amp;D roles, I've taken ideas from early scoping through implementation and validation—both as an individual contributor and as a technical lead. I'm comfortable navigating the wider framing of a problem and choosing the simplest model that still captures the physics that matters.
-</p>
-
-<p class="uk-margin-xlarge-left uk-margin-xlarge-right">
-  I hold a PhD from the Institute of Physics at EPFL (Lausanne) and a Joint Master's in Nuclear Engineering from ETH Zurich and EPFL. I care about clarity: translating complex results into actionable insights people can use.
-</p>
-<!--<a href="" class="uk-margin-xlarge-left uk-light uk-button-text" uk-icon="instagram"></a>  &nbsp;--><a href="https://winterlead.com" class="uk-margin-xlarge-left uk-light uk-button-text" uk-icon="dribbble"></a> &nbsp;<a href="mailto:hello@winterlead.com" class="uk-light uk-button-text" uk-icon="mail"></a> &nbsp;<a href="https://github.com/tannhorn" class="uk-button-text uk-light" uk-icon="github"></a> &nbsp;<a href="https://www.linkedin.com/in/lubomir-bures/" class=" uk-light uk-button-text" uk-icon="linkedin"></a>  &nbsp;<a href="https://scholar.google.com/citations?user=rQRIrc4AAAAJ" class=" uk-light uk-button-text" uk-icon="scholar"></a>
-
-<!-- About Me Ends -->
-
-
-
-
-
-
-
-</section>
-
-<!-- Projects Section -->
-<hr class="uk-margin-xlarge-left uk-margin-xlarge-right">
-<!-- This div is to fix the issue with scrolling -->
-<div id="projectsbefore"></div>
-
-<section id="projects" class="uk-margin-small-left uk-margin-small-right uk-margin-xlarge-top uk-margin-xlarge-bottom">
-
-  <!-- Intro card -->
-  <div class="uk-margin-xlarge-left uk-margin-xlarge-right">
-    <div class="uk-margin uk-card uk-card-secondary uk-card-body">
-      <p>
-        I currently work as a <strong>Senior Multiphysics Specialist</strong> at
-        <a href="https://saltfoss.com" class="uk-link-reset">
-          <strong>Saltfoss Energy ApS</strong></a>, a Danish developer of barge-deployed molten-salt nuclear reactors.
-      </p>
     </div>
   </div>
 
-  <h3 class="uk-margin-xlarge-left uk-light">Projects</h3>
-  <p class="uk-margin-xlarge-left">
-    As a freelance consultant, I have worked on the following projects:
-  </p>
+  <main id="content">
+    <!-- Home -->
+    <section class="uk-margin-small-left uk-margin-small-right uk-margin-xlarge-top uk-margin-xlarge-bottom">
+      <h1 class="uk-margin-xlarge-left uk-light uk-text-left uk-margin-xlarge-right">
+        I'm Lubomír Bureš, a nuclear engineer with deep experience in computational modelling and technical problem solving.
+      </h1>
+      <a href="#about" class="uk-margin-xlarge-left uk-text-capitalize uk-button uk-button-secondary" uk-scroll>
+        About Me
+      </a>
+    </section>
 
-<div class="uk-margin-xlarge-left uk-margin-xlarge-right">
-    <div class="uk-margin uk-card uk-card-secondary uk-card-body ">
-        <h4>Quantified Carbon</h4>
-        <p>Developed software for Quantified Carbon Limited. <i>April 2024 - June 2025.</i></p>
-        <a class="uk-button-text uk-text-decoration-none" href="https://www.quantifiedcarbon.com/">
-            <span uk-icon="icon: link">
-            </span> Website Link </a>
+    <hr class="uk-margin-xlarge-top uk-margin-xlarge-left uk-margin-xlarge-right">
+
+    <!-- About -->
+    <section class="uk-margin-small-left uk-margin-small-right uk-margin-xlarge-top uk-margin-xlarge-bottom">
+      <!-- Precise scroll target: lands so the next element sits right under sticky navbar -->
+      <div id="about" class="anchor-target" aria-hidden="true"></div>
+
+      <h3 class="uk-margin-xlarge-left uk-light">About Me</h3>
+
+      <p class="uk-margin-xlarge-left uk-margin-xlarge-right">
+        I build and validate computational models that help teams make confident engineering decisions. My background is in computational physics and engineering, and I've worked on problems ranging from microscopic physics phenomena to system-level analyses.
+      </p>
+
+      <p class="uk-margin-xlarge-left uk-margin-xlarge-right">
+        In deep-tech R&amp;D roles, I've taken ideas from early scoping through implementation and validation—both as an individual contributor and as a technical lead. I'm comfortable navigating the wider framing of a problem and choosing the simplest model that still captures the physics that matters.
+      </p>
+
+      <p class="uk-margin-xlarge-left uk-margin-xlarge-right">
+        I hold a PhD from the Institute of Physics at EPFL (Lausanne) and a Joint Master's Degree in Nuclear Engineering from ETH Zurich and EPFL. I care about clarity: translating complex results into useful actionable insights.
+      </p>
+
+      <!-- Social icons row -->
+    <div class="uk-margin-xlarge-left social-links" aria-label="Social links">
+    <a href="https://winterlead.com" class="uk-light uk-button-text" uk-icon="world" aria-label="Website"></a>
+    <a href="mailto:hello@winterlead.com" class="uk-light uk-button-text" uk-icon="mail" aria-label="Email"></a>
+    <a href="https://github.com/tannhorn" class="uk-light uk-button-text" uk-icon="github" aria-label="GitHub"></a>
+    <a href="https://www.linkedin.com/in/lubomir-bures/" class="uk-light uk-button-text" uk-icon="linkedin" aria-label="LinkedIn"></a>
+    <a href="https://scholar.google.com/citations?user=rQRIrc4AAAAJ" class="uk-light uk-button-text scholar-link" aria-label="Google Scholar">
+        <span class="scholar-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" role="img" focusable="false" aria-hidden="true">
+            <path d="M12 3 1 8.2 12 13.4 20 9.7V16h2V8.2L12 3Zm-6.8 8.1V14c0 2.8 3.1 5 6.8 5s6.8-2.2 6.8-5v-2.9L12 14.8 5.2 11.1Z"/>
+        </svg>
+        </span>
+    </a>
+    </div>
+
+    </section>
+
+    <hr class="uk-margin-xlarge-left uk-margin-xlarge-right">
+
+    <!-- Projects -->
+    <section class="uk-margin-small-left uk-margin-small-right uk-margin-xlarge-top uk-margin-xlarge-bottom">
+      <!-- Precise target: lands exactly above the Saltfoss card -->
+      <div id="projects" class="anchor-target" aria-hidden="true"></div>
+
+      <div class="uk-margin-xlarge-left uk-margin-xlarge-right">
+        <div class="uk-margin uk-card uk-card-secondary uk-card-body">
+          <p>
+            I currently work as a <strong>Senior Multiphysics Specialist</strong> at
+            <a href="https://saltfoss.com" class="uk-link-reset">
+              <strong>Saltfoss Energy ApS</strong>
+            </a>, a Danish developer of barge-deployed molten-salt nuclear reactors.
+          </p>
         </div>
-    <br>
-</div>
-<div class="uk-margin-xlarge-left uk-margin-xlarge-right">
-    <div class="uk-margin uk-card uk-card-secondary uk-card-body ">
-        <h4>Repower Initiative</h4>
-        <p>Volunteered technical expertise to the non-profit Repower Initiative. <i>August 2024 - October 2024.</i></p>
-        <a class="uk-button-text uk-text-decoration-none" href="https://www.repower.world/">
-            <span uk-icon="icon: link">
-            </span> Website Link </a>
+      </div>
+
+      <h3 class="uk-margin-xlarge-left uk-light">Projects</h3>
+      <p class="uk-margin-xlarge-left">
+        As a freelance consultant, I have worked on the following projects:
+      </p>
+
+      <div class="uk-margin-xlarge-left uk-margin-xlarge-right">
+        <div class="uk-margin uk-card uk-card-secondary uk-card-body">
+          <h4>Quantified Carbon</h4>
+          <p>Developed software for Quantified Carbon Limited. <i>April 2024 - June 2025.</i></p>
+          <a class="uk-button-text uk-text-decoration-none" href="https://www.quantifiedcarbon.com/">
+            <span uk-icon="icon: link"></span> Website Link
+          </a>
         </div>
-    <br>
-</div>
+        <br>
+      </div>
 
-</section>
+      <div class="uk-margin-xlarge-left uk-margin-xlarge-right">
+        <div class="uk-margin uk-card uk-card-secondary uk-card-body">
+          <h4>Repower Initiative</h4>
+          <p>Volunteered technical expertise to the non-profit Repower Initiative. <i>August 2024 - October 2024.</i></p>
+          <a class="uk-button-text uk-text-decoration-none" href="https://www.repower.world/">
+            <span uk-icon="icon: link"></span> Website Link
+          </a>
+        </div>
+        <br>
+      </div>
+    </section>
 
-<!-- Projects Section Ends -->
+    <hr class="uk-margin-xlarge-left uk-margin-xlarge-right">
 
-<!-- Contacts Section -->
-<hr class="uk-margin-xlarge-left uk-margin-xlarge-right">
-<!-- This div is to fix the issue with scrolling -->
-<div id="contactsbefore"></div>
-<section id="contactsbefore" class="uk-margin-small-left uk-margin-small-right uk-margin-xlarge-top uk-margin-xlarge-bottom">
-<h3 class="uk-margin-xlarge-left uk-light">Contact</h3>
-<p class="uk-margin-xlarge-left">Get in touch at <a href="mailto:hello@winterlead.com" class="uk-light" uk-icon="mail">hello@winterlead.com </a> or find me on <a href="https://www.linkedin.com/in/lubomir-bures/" uk-icon="linkedinup">LinkedIn </a>!</p>
-<hr class="uk-margin-xlarge-left uk-margin-xlarge-right">
+    <!-- Contact -->
+    <section class="uk-margin-small-left uk-margin-small-right uk-margin-xlarge-top uk-margin-xlarge-bottom">
+      <!-- Precise target: lands so Contact heading sits right under sticky navbar -->
+      <div id="contact" class="anchor-target" aria-hidden="true"></div>
 
-<!-- Contacts Section Ends -->
-    
+      <h3 class="uk-margin-xlarge-left uk-light">Contact</h3>
+
+      <p class="uk-margin-xlarge-left contact-row">
+        Get in touch at
+        <a href="mailto:hello@winterlead.com" class="uk-light uk-link-reset">
+          <span uk-icon="mail"></span> hello@winterlead.com
+        </a>
+        or find me on
+        <a href="https://www.linkedin.com/in/lubomir-bures/" class="uk-light uk-link-reset">
+          <span uk-icon="linkedin"></span> LinkedIn
+        </a>!
+      </p>
+
+      <hr class="uk-margin-xlarge-left uk-margin-xlarge-right">
+    </section>
+  </main>
 </body>
 </html>

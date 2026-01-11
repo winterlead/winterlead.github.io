@@ -1,5 +1,74 @@
 html{
-    /* font-family: IBM Plex Mono; */
-    font-family: 'Open Sans';
+  font-family: 'Open Sans', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
 }
 
+/* Precise anchor landing under sticky navbar.
+   Tune this once to match the sticky navbar height (often ~80-100px). */
+:root{
+  --sticky-offset: 95px;
+}
+
+/* Clicking #about/#projects/#contact lands exactly where one places the anchor-target. */
+.anchor-target{
+  position: relative;
+  top: calc(-1 * var(--sticky-offset));
+  height: 0;
+}
+
+/* Social row spacing (keeps same visual intent as &nbsp; but more robust) */
+.social-links{
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.social-links a{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  min-height: 40px;
+}
+
+/* 3) Scholar icon (inline SVG) matches theme via currentColor */
+.scholar-icon svg{
+  width: 20px;
+  height: 20px;
+  display: block;
+  fill: currentColor;
+}
+
+/* 4) Ensure contact links inherit the light theme color */
+.contact-row a.uk-link-reset{
+  color: inherit;
+}
+
+/* Keyboard focus visibility (doesn’t affect mouse users) */
+a:focus-visible,
+button:focus-visible{
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+
+/* Skip link (hidden until keyboard focus) */
+.skip-link{
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transform: translateY(-200%);
+  transition: transform 0.2s ease;
+  z-index: 10000;
+}
+.skip-link:focus{
+  transform: translateY(0);
+}
+
+/* Burger */
+.burger-btn{
+  background: transparent;
+  border: 0;
+  color: #000; /* makes the icon black in UIkit */
+  cursor: pointer;
+}
