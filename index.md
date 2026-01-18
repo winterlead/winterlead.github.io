@@ -16,7 +16,7 @@ description: Winterlead is a small consulting practice focused on engineering se
   <article class="card reveal" style="--delay: 240ms;">
     <h2>Portfolio</h2>
     <p>
-      Portfolio: <a href="https://lubomirbures.com" target="_blank" rel="noopener noreferrer" aria-label="Portfolio at lubomirbures.com (opens in new tab)">lubomirbures.com</a>
+      Website: <a href="https://lubomirbures.com" target="_blank" rel="noopener noreferrer" aria-label="Portfolio at lubomirbures.com (opens in new tab)">lubomirbures.com</a>
     </p>
   </article>
   <article class="card reveal" style="--delay: 320ms;">
