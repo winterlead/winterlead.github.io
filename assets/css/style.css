@@ -74,33 +74,8 @@ body {
   margin: 0;
   font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", "Palatino", "Garamond", serif;
   color: var(--ink);
-  background:
-    radial-gradient(circle at top left, var(--bg-top) 0%, var(--bg) 45%, var(--bg-deep) 100%),
-    linear-gradient(140deg, rgba(255, 255, 255, 0.7), var(--bg-sheen));
+  background: var(--bg);
   min-height: 100vh;
-}
-
-body::before,
-body::after {
-  content: "";
-  position: fixed;
-  inset: auto;
-  width: 320px;
-  height: 320px;
-  background: radial-gradient(circle, var(--glow-1), transparent 70%);
-  z-index: -1;
-  filter: blur(3px);
-}
-
-body::before {
-  top: -60px;
-  right: -80px;
-}
-
-body::after {
-  bottom: -120px;
-  left: -60px;
-  background: radial-gradient(circle, var(--glow-2), transparent 70%);
 }
 
 a {
