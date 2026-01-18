@@ -147,7 +147,14 @@ button:focus-visible {
   border-radius: 50%;
   border: 1px solid var(--border);
   background: var(--accent-soft);
-  font-weight: 600;
+  color: var(--ink);
+  line-height: 0;
+}
+
+.brand-mark svg {
+  width: 32px;
+  height: 32px;
+  display: block;
 }
 
 .site-nav {
