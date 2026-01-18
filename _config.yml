@@ -1,0 +1,10 @@
+title: "Winterlead"
+email: "hello@winterlead.com"
+description: "Winterlead is a small consulting practice focused on engineering services and computational modelling."
+author: "Lubomír Bureš"
+baseurl: ""
+url: "https://winterlead.com"
+markdown: kramdown
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap

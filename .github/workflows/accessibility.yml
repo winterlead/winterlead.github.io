@@ -1,0 +1,68 @@
+name: Accessibility Audit
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  lighthouse:
+    runs-on: ubuntu-latest
+    env:
+      ACCESSIBILITY_SCORE_THRESHOLD: "0.95"
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3.4"
+          bundler-cache: true
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Build site
+        run: bundle exec jekyll build
+
+      - name: Run Lighthouse accessibility audit
+        run: |
+          set -euo pipefail
+          mkdir -p artifacts/lighthouse
+          python3 -m http.server --directory _site 4000 >/tmp/http.log 2>&1 &
+          server_pid=$!
+          trap 'kill $server_pid 2>/dev/null; wait $server_pid 2>/dev/null || true' EXIT
+          sleep 1
+          out="artifacts/lighthouse/lh-home.json"
+          npx lighthouse "http://127.0.0.1:4000/" \
+            --only-categories=accessibility \
+            --output=json \
+            --output-path "$out" \
+            --chrome-flags="--headless --no-sandbox" \
+            --quiet
+
+      - name: Enforce accessibility score threshold
+        run: |
+          python3 - <<'PY'
+          import json
+          import os
+          import sys
+
+          threshold = float(os.environ.get("ACCESSIBILITY_SCORE_THRESHOLD", "0.95"))
+          path = "artifacts/lighthouse/lh-home.json"
+          with open(path, "r", encoding="utf-8") as handle:
+            data = json.load(handle)
+          score = data["categories"]["accessibility"]["score"]
+          url = data.get("finalUrl") or data.get("requestedUrl") or path
+          if score is None or score < threshold:
+            print(f"Accessibility score below threshold: {url} score={score} report={path}")
+            sys.exit(1)
+          print(f"Accessibility score meets threshold {threshold}.")
+          PY
+
+      - name: Upload Lighthouse report
+        uses: actions/upload-artifact@v4
+        with:
+          name: lighthouse-accessibility
+          path: artifacts/lighthouse
